@@ -237,7 +237,7 @@ class FieldQuantitiesMixin:
             'kPa': 1e3,
             'MPa': 1
         }
-        return -convert[unit]*self.kt*(
+        return convert[unit]*self.kt*(
             self.dw_dx(Z)*self.t/2 - self.u(Z, z0=self.h/2))
 
     def eps(self, Z):
